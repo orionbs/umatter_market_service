@@ -1,0 +1,7 @@
+database:
+  source:
+    driver: h2
+    protocol: mem
+    user: 8ngzhe052ele
+    password: 1wpegrn67kac
+    database: 284jkfwxuido

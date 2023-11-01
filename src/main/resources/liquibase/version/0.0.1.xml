@@ -1,0 +1,35 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!-- audit field
+    <column name="CREATED_BY" type="UUID">
+        <constraints nullable="false"/>
+    </column>
+    <column name="CREATED_DATE" type="TIMESTAMP">
+        <constraints nullable="false"/>
+    </column>
+    <column name="LAST_MODIFIED_BY" type="UUID"/>
+    <column name="LAST_MODIFIED_DATE" type="TIMESTAMP"/>
+    -->
+
+    <!--Create domain table-->
+    <changeSet id="CREATE DOMAIN TABLE" author="Orion Beauny">
+        <createTable schemaName="PUBLIC" tableName="DOMAIN">
+            <column name="ID" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" primaryKeyName="PK_DOMAIN"/>
+            </column>
+            <column name="NAME" type="VARCHAR(100)"/>
+            <column name="DESCRIPTION" type="VARCHAR(300)"/>
+            <column name="CREATED_BY" type="UUID">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATED_DATE" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LAST_MODIFIED_BY" type="UUID"/>
+            <column name="LAST_MODIFIED_DATE" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

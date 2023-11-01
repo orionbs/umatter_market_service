@@ -1,0 +1,14 @@
+database:
+  source:
+    host: localhost
+    port: 5432
+    user: acxnjie2h3eb
+    password: wlbi7i97lmpr
+    database: p92dkzi3lanb
+
+http:
+  security:
+    issuer-url: http://localhost:8080/realms/master
+
+server:
+  port: 8081
